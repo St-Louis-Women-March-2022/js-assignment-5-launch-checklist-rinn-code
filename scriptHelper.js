@@ -27,6 +27,7 @@ function validateInput(testInput) {
           let cargoMass = 
           if (pilotName.value === "" || teamName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
              alert("All fields are required!");
+             event.preventDefault();
           }
        });
     });
