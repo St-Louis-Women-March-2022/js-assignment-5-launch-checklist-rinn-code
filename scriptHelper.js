@@ -17,6 +17,8 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 }
 
 function validateInput(testInput) {
+    //I think here I will use a for loop to determine if name fields are strings
+    // and levels/measurement fields are numbers
 
 }
 
