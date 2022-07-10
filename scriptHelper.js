@@ -19,6 +19,8 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 function validateInput(testInput) {
     //I think here I will use a for loop to determine if name fields are strings
     // and levels/measurement fields are numbers
+    // isNaN(value) true vs. false
+    // if field == "" then return "empty"
 
 }
 
@@ -32,7 +34,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             let cargoMass = document.querySelector("input[name=cargoMass]");
             if (pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
                 alert("All fields are required!");
-                 event.preventDefault();
+                event.preventDefault();
           }
        });
     });
