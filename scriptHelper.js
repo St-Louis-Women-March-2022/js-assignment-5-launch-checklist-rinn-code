@@ -32,7 +32,11 @@ function validateInput(testInput) {
     } else {
         console.log("Is a Number");
     }
-
+    if (isNaN(cargoMass) == false) {
+        console.log("Not a Number");
+    } else {
+        console.log("Is a Number");
+    }
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
