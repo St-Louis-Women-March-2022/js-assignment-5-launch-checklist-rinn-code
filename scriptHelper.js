@@ -17,10 +17,21 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 }
 
 function validateInput(testInput) {
-    //I think here I will use a for loop to determine if name fields are strings
-    // and levels/measurement fields are numbers
-    // isNaN(value) true vs. false
-    // if field == "" then return "empty"
+    let pilotName = document.querySelector("input[name=pilotName]");
+    let copilotName = document.querySelector("input[name=copilotName]");
+    let fuelLevel = document.querySelector("input[name=fuelLevel]");
+    let cargoMass = document.querySelector("input[name=cargoMass]");
+    if (pilotName == "") {
+        console.log("Empty");
+    }    
+    if (copilotName == "") {
+        console.log("Empty");
+    }
+    if (isNaN(fuelLevel) == false) {
+        console.log("Not a Number");
+    } else {
+        console.log("Is a Number");
+    }
 
 }
 
