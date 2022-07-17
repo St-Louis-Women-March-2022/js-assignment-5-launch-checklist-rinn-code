@@ -43,6 +43,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     window.addEventListener("load", function() {
         let form = document.querySelector("form");
         form.addEventListener("submit", function(event) {
+            alert("existence is pain");
             let pilotName = document.querySelector("input[name=pilotName]");
             let copilotName = document.querySelector("input[name=copilotName]");
             let fuelLevel = document.querySelector("input[name=fuelLevel]");
