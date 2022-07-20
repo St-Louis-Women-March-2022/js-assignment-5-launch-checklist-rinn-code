@@ -47,26 +47,10 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 }
 
 async function myFetch() {
-    //let listedPlanets;
-    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
     let listedPlanetsResponse = await fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
         return response.json;
     });
     return listedPlanetsResponse;
-   /* listedPlanetsResponse.then(function (result) {
-        listedPlanets = result;
-        console.log(listedPlanets);
-    }).then(function () {
-        console.log(listedPlanets);
-        // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
-    })*/
-   
-   // let planetsReturned;
-
-  //  planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
-   // });
-
-   // return planetsReturned.json();
 }
 
 function pickPlanet(planets) {
