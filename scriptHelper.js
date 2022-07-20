@@ -28,20 +28,10 @@ function validateInput(testInput) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    window.addEventListener("load", function() {
-        let form = document.querySelector("form");
-        form.addEventListener("submit", function(event) {
-            alert("existence is pain");
-            let pilotName = document.querySelector("input[name=pilotName]");
-            let copilotName = document.querySelector("input[name=copilotName]");
-            let fuelLevel = document.querySelector("input[name=fuelLevel]");
-            let cargoMass = document.querySelector("input[name=cargoMass]");
-            if (pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
-                alert("All fields are required!");
-                event.preventDefault();
-          }
-       });
-    });
+    if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
+        // TO DO: FINISH THIS BIZ
+    }
+   
 }
 
 async function myFetch() {
