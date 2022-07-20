@@ -19,11 +19,13 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 function validateInput(testInput) {
     let pilotName = document.querySelector("input[name=pilotName]");
     if (pilotName == "") {
-            console.log("Empty");
+            alert("Empty");
+            return false;
         }    
     let copilotName = document.querySelector("input[name=copilotName]");
     if (copilotName == "") {
-            console.log("Empty");
+            alert("Empty");
+            return false;
         }
     let fuelLevel = document.querySelector("input[name=fuelLevel]");
     if (isNaN(fuelLevel) == false) {
