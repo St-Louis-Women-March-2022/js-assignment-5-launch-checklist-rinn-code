@@ -17,9 +17,12 @@ window.addEventListener("load", function() {
         let planet = pickPlanet(listedPlanets);
         addDestinationInfo(document, planet.name, planet.diameter, planet.star, planet.distance, planet.moons, planet.image);
     })
-    let list; // TO DO: Work on list for Flight Requirements/ Faulty Equipment
+    let list = document.getElementById("faultyItems"); 
+    //list.style.visibility = "hidden";
+    // TO DO: Work on list for Flight Requirements/ Faulty Equipment
     let form = document.querySelector("form");
     form.addEventListener("submit", function(event) {
+        event.preventDefault();
         let pilotName = document.querySelector("input[name=pilotName]");
         let pilot = pilotName.value;
         let copilotName = document.querySelector("input[name=copilotName]");

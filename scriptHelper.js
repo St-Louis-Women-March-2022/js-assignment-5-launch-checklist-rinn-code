@@ -33,12 +33,34 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     } else if(validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
         alert("Enter correct input type!");
     } else{
+        //alert("Everything is fine");
+       // list.style.visibility = "visible";
         let pilotStatus = document.getElementById("pilotStatus");
-            pilotStatus.innerHTML = `${pilot}`;
+            pilotStatus.innerHTML = `${pilot} is ready for liftoff`;
         let copilotStatus = document.getElementById("copilotStatus");
+            copilotStatus.innerHTML = `${copilot} is ready for liftoff`;
         let fuelStatus = document.getElementById("fuelStatus");
+            fuelStatus.innerHTML = `${fuelLevel} liters is adequate`;
         let cargoStatus = document.getElementById("cargoStatus");
-
+                    cargoStatus.innerHTML = `${cargoLevel} kg is safe for travel`;
+            launchStatus.innerHTML = "Shuttle ready for Launch!";
+                    launchStatus.style.color = "green"; 
+        if(fuelLevel < 10000) {
+            list.style.visibility = "visible";
+            let launchStatus = document.getElementById("launchStatus");
+                launchStatus.innerHTML = "Shuttle not ready for launch";
+                launchStatus.style.color = "red";
+            fuelStatus.innerHTML = `${fuelLevel} liters is not enough fuel for the journey!`;
+            }
+        
+        if(cargoLevel > 10000) {
+            list.style.visibility = "visible";
+            let launchStatus = document.getElementById("launchStatus");
+                launchStatus.innerHTML = "Shuttle not ready for launch";
+                launchStatus.style.color = "red";
+            cargoStatus.innerHTML = `${cargoLevel} kg is too heckin thicc for the journey!`;
+            }
+           
     }
    
 }
