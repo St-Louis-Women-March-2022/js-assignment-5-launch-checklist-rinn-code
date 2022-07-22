@@ -29,7 +29,16 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
-        // TO DO: FINISH THIS BIZ
+        alert("All fields are required!");
+    } else if(validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
+        alert("Enter correct input type!");
+    } else{
+        let pilotStatus = document.getElementById("pilotStatus");
+            pilotStatus.innerHTML = `${pilot}`;
+        let copilotStatus = document.getElementById("copilotStatus");
+        let fuelStatus = document.getElementById("fuelStatus");
+        let cargoStatus = document.getElementById("cargoStatus");
+
     }
    
 }
